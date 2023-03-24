@@ -1,0 +1,24 @@
+---
+
+- name: IOS Show command
+  hosts: Routers
+  tasks:
+    - ios_command:
+        commands:
+        - show version | inc Version|uptime
+        - show ip route | inc O|B
+        - show cdp neighbors 
+        - show ip arp
+        - show ip interface brief
+        - show ip ospf neighbor
+        - show ip bgp summary
+        
+      register: results
+    - template:
+        src: ios-command-summary.j2
+        dest: "Result/{{inventory_hostname}}.txt"
+      delegate_to: localhost
+  
+
+
+

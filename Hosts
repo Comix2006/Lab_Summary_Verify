@@ -1,0 +1,12 @@
+[Routers]
+R1 ansible_host=192.192.192.16
+R2 ansible_host=192.192.192.17
+R3 ansible_host=192.192.192.18
+R4 ansible_host=192.192.192.19
+
+[Routers:vars]
+ansible_connection=network_cli
+ansible_network_os=ios
+ansible_user=test
+ansible_password=test
+
