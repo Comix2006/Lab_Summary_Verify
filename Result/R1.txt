@@ -1,0 +1,91 @@
+Output version and uptime
+------------------------------------
+Cisco IOS Software, Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T, DEVELOPMENT TEST SOFTWARE
+R1 uptime is 3 days, 20 hours, 21 minutes
+
+
+Output routing table OSPF and BGP
+------------------------------------
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+O        2.2.2.2 [110/11] via 192.168.12.2, 01:35:50, Ethernet0/1.12
+O        3.3.3.3 [110/21] via 192.168.12.2, 01:32:32, Ethernet0/1.12
+O        4.4.4.4 [110/31] via 192.168.12.2, 01:26:35, Ethernet0/1.12
+B        172.16.4.0/24 [200/0] via 2.2.2.2, 01:26:21
+O     192.168.23.0/24 [110/20] via 192.168.12.2, 01:35:50, Ethernet0/1.12
+O     192.168.34.0/24 [110/30] via 192.168.12.2, 01:32:42, Ethernet0/1.12
+
+
+Output neighbors
+------------------------------------
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R3.test@lab.kz   Eth 0/1           132              R B   Linux Uni Eth 0/1
+R3.test@lab.kz   Eth 0/0           156              R B   Linux Uni Eth 0/0
+R4.test@lab.kz   Eth 0/1           140              R B   Linux Uni Eth 0/1
+R4.test@lab.kz   Eth 0/0           171              R B   Linux Uni Eth 0/0
+R2.test.kz       Eth 0/1           169              R B   Linux Uni Eth 0/1
+R2.test.kz       Eth 0/0           135              R B   Linux Uni Eth 0/0
+
+Total cdp entries displayed : 6
+
+
+Output ARP table
+------------------------------------
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  192.168.12.1            -   aabb.cc00.0210  ARPA   Ethernet0/1.12
+Internet  192.168.12.2           97   aabb.cc00.0110  ARPA   Ethernet0/1.12
+Internet  192.192.192.1          18   0a00.2700.000c  ARPA   Ethernet0/0
+Internet  192.192.192.10          0   0800.2787.ab5c  ARPA   Ethernet0/0
+Internet  192.192.192.16          -   aabb.cc00.0200  ARPA   Ethernet0/0
+
+
+Output interface brief
+------------------------------------
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                192.192.192.16  YES manual up                    up      
+Ethernet0/1                unassigned      YES manual up                    up      
+Ethernet0/1.12             192.168.12.1    YES manual up                    up      
+Ethernet0/2                unassigned      YES manual up                    up      
+Ethernet0/3                unassigned      YES manual up                    up      
+Ethernet1/0                unassigned      YES NVRAM  administratively down down    
+Ethernet1/1                unassigned      YES NVRAM  administratively down down    
+Ethernet1/2                unassigned      YES NVRAM  administratively down down    
+Ethernet1/3                unassigned      YES NVRAM  administratively down down    
+Serial2/0                  unassigned      YES NVRAM  administratively down down    
+Serial2/1                  unassigned      YES NVRAM  administratively down down    
+Serial2/2                  unassigned      YES NVRAM  administratively down down    
+Serial2/3                  unassigned      YES NVRAM  administratively down down    
+Serial3/0                  unassigned      YES NVRAM  administratively down down    
+Serial3/1                  unassigned      YES NVRAM  administratively down down    
+Serial3/2                  unassigned      YES NVRAM  administratively down down    
+Serial3/3                  unassigned      YES NVRAM  administratively down down    
+Loopback0                  1.1.1.1         YES manual up                    up      
+Loopback10                 172.16.1.1      YES manual up                    up
+
+Output OSPF neighbors
+------------------------------------
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+2.2.2.2           0   FULL/  -        00:00:33    192.168.12.2    Ethernet0/1.12
+
+Output BGP neighbors
+------------------------------------
+BGP router identifier 1.1.1.1, local AS number 10
+BGP table version is 3, main routing table version 3
+2 network entries using 280 bytes of memory
+2 path entries using 160 bytes of memory
+2/2 BGP path/bestpath attribute entries using 288 bytes of memory
+1 BGP AS-PATH entries using 24 bytes of memory
+0 BGP route-map cache entries using 0 bytes of memory
+0 BGP filter-list cache entries using 0 bytes of memory
+BGP using 752 total bytes of memory
+BGP activity 2/0 prefixes, 2/0 paths, scan interval 60 secs
+
+Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+2.2.2.2         4           10     110     111        3    0    0 01:35:50        1
